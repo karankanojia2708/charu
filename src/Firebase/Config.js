@@ -14,7 +14,8 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const projectStorage = firebase.storage();
 const projectFireStore = firebase.firestore();
-export {projectFireStore, projectStorage};
+const timeStamp = firebase.firestore.FieldValue.serverTimestamp;
+export {projectFireStore, projectStorage, timeStamp};
 /*
  https://git.heroku.com/damp-citadel-67363.git
 * */
